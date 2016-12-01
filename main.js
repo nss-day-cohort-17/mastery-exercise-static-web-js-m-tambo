@@ -1,9 +1,11 @@
+console.log("is this thing on?")
+
+
+
 var tHeight = document.getElementById("treeHeight").value;
 
-var tChar = document.getElementById("treeChar").value;
+var tChar = document.getElementById("treeChar").input;
 
-function tree() {
-   console.log("*")
+function growTree () {
+   console.log(tHeight, tChar);
 }
-
-console.log("tHeight", "tChar");
