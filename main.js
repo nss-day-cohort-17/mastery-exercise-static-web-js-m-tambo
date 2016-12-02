@@ -9,13 +9,6 @@ function getTreeSpecs() {
    var treeSpecs = {tHeight: treeHeight, tChar: treeChar}
 }
 
-// event listeners for button and enter key
-// function() {
-
-// }
-// submit.addEventListener()
-// submit.addEventListener()
-
 // define function
 function growTree(Obj) {
    getTreeSpecs();
@@ -25,6 +18,23 @@ function growTree(Obj) {
   console.log(newTree);
 }
 
+document.getElementById("grow").addEventListener('click', function() {
+   growTree(treeSpecs)
+})
+
+document.getElementById("grow").addEventListener('keypress', function() {
+   growTree(treeSpecs)
+})
+
+// event listeners for button and enter key
+// function() {
+
+// }
+// submit.addEventListener()
+// submit.addEventListener()
+
+
+
 
 
 // testing
@@ -32,7 +42,7 @@ var treeHeight = document.getElementById("treeHeight").value;
 console.log(treeHeight);
 
 
-// growTree(treeObj);
+
 
 // listen for.... the two parameters?
 // button.addEventListener('click', growTree(treeHeight, treeChar), false)
