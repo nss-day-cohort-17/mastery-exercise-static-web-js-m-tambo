@@ -25,14 +25,20 @@ document.getElementById("grow").addEventListener('click', function() {
    if (treeSpecs.tHeight === "" || treeSpecs.tChar === "") {
       alert("Enter a valid character in each box!");
    }
-   growTree(treeSpecs);
+   else {
+      growTree(treeSpecs);
+   }
 })
 
 // event listener for enter key
-document.addEventListener('keypress', function() {
-   var treeSpecs = getTreeSpecs();
-   if (treeSpecs.tHeight === "" || treeSpecs.tChar === "") {
-      alert("Enter a valid character in each box!");
+document.getElementById("treeChar").addEventListener('keypress', function(x) {
+   if (x.key === "Enter") {
+      var treeSpecs = getTreeSpecs();
+      if (treeSpecs.tHeight === "" || treeSpecs.tChar === "") {
+         alert("Enter a valid character in each box!");
+      }
+      else {
+         growTree(treeSpecs);
+      }
    }
-   growTree(treeSpecs)
 })
