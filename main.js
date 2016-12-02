@@ -2,22 +2,25 @@ console.log("is this thing on?")
 
 
 // get variables
-var treeHeight = document.getElementById("treeHeight").value;
 
-var treeChar = document.getElementById("treeChar").value;
-
-var button = document.getElementById("grow");
-
-
-// checking to see if those inputs returned values
-console.log(treeHeight, treeChar);
-
-
-// define the function that grows the tree
-function growTree(x, y) {
-
+function getTreeObj() {
+   var treeObj = {};
+   var treeHeight = document.getElementById("treeHeight").value;
+   var treeChar = document.getElementById("treeChar").value;
+   treeObj.
 }
 
 
+// define function
+function growTree(treeObj) {
+   for(var i = 0; i <= treeObj.treeHeight; i++) {
+     newTree += " ".repeat(treeObj.treeHeight - i) + treeObj.treeChar.repeat(2*i + 1) + "\n";
+   }
+  console.log(newTree);
+}
+
+
+growTree(treeObj);
+
 // listen for.... the two parameters?
-button.addEventListener('click', growTree(treeHeight, treeChar), false)
+// button.addEventListener('click', growTree(treeHeight, treeChar), false)
