@@ -1,8 +1,7 @@
 console.log("is this thing on?")
 
 
-// get variables
-
+// get variables and add them to object
 function getTreeSpecs() {
    var treeHeight = document.getElementById("treeHeight").value;
    var treeChar = document.getElementById("treeChar").value;
@@ -10,7 +9,7 @@ function getTreeSpecs() {
    return treeSpecs;
 }
 
-// define function
+// define tree function
 function growTree(Obj) {
    var newTree ="";
    getTreeSpecs();
@@ -20,18 +19,20 @@ function growTree(Obj) {
   console.log(newTree)
 }
 
+// event listener for button
 document.getElementById("grow").addEventListener('click', function() {
    var treeSpecs = getTreeSpecs();
+   if (treeSpecs.tHeight === "" || treeSpecs.tChar === "") {
+      alert("Enter a valid character in each box!");
+   }
    growTree(treeSpecs);
 })
 
-document.getElementById("grow").addEventListener('keypress', function() {
+// event listener for enter key
+document.addEventListener('keypress', function() {
+   var treeSpecs = getTreeSpecs();
+   if (treeSpecs.tHeight === "" || treeSpecs.tChar === "") {
+      alert("Enter a valid character in each box!");
+   }
    growTree(treeSpecs)
 })
-
-// event listeners for button and enter key
-// function() {
-
-// }
-// submit.addEventListener()
-// submit.addEventListener()
