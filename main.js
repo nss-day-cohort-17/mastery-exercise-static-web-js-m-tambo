@@ -30,7 +30,20 @@ document.getElementById("grow").addEventListener('click', function() {
    }
 })
 
-// event listener for enter key
+// event listener for enter key in the FIRST input
+document.getElementById("treeHeight").addEventListener('keypress', function(x) {
+   if (x.key === "Enter") {
+      var treeSpecs = getTreeSpecs();
+      if (treeSpecs.tHeight === "" || treeSpecs.tChar === "") {
+         alert("Enter a valid character in each box!");
+      }
+      else {
+         growTree(treeSpecs);
+      }
+   }
+})
+
+// event listener for enter key in the SECOND input
 document.getElementById("treeChar").addEventListener('keypress', function(x) {
    if (x.key === "Enter") {
       var treeSpecs = getTreeSpecs();
